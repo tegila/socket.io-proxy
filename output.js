@@ -1,4 +1,5 @@
-var socket = require('socket.io-client')('http://localhost:3000/out');
+const url = process.env.URL || 'localhost:3000';
+var socket = require('socket.io-client')(`http://${url}/out`);
 
 socket.on('connect', function(){
   console.log('connected');

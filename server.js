@@ -1,4 +1,5 @@
-const io = require('socket.io')(3000);
+const port = process.env.PORT || 3000;
+const io = require('socket.io')(port);
 
 io.on('connection', function (socket) {
   console.log('new connection', socket.id);
